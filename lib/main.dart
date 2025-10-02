@@ -46,7 +46,7 @@ class _CalculatorHomeState extends State<CalculatorHome> {
               display = (firstNum! * secondNum).toString();
               break;
             case '/':
-              display = (firstNum! / secondNum).toString();
+              display = secondNum != 0 ? (firstNum! / secondNum).toString() : 'Err';
               break;
           }
         }
@@ -71,11 +71,11 @@ class _CalculatorHomeState extends State<CalculatorHome> {
         child: Container(
           height: 80,
           margin: EdgeInsets.all(1),
-          color: Colors.grey,
+          color: const Color.fromARGB(255, 216, 129, 213),
           child: Center(
             child: Text(
               value,
-              style: TextStyle(fontSize: 24, color: Colors.white),
+              style: TextStyle(fontSize: 24, color: const Color.fromARGB(255, 127, 40, 115)),
             ),
           ),
         ),
@@ -95,7 +95,7 @@ class _CalculatorHomeState extends State<CalculatorHome> {
             padding: EdgeInsets.all(20),
             child: Text(
               display,
-              style: TextStyle(fontSize: 48),
+              style: TextStyle(fontSize: 48, color: const Color.fromARGB(255, 127, 40, 115)),
             ),
           ),
           Expanded(
