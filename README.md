@@ -1,6 +1,6 @@
 # calculator_app
 
-A new Flutter project.
+This Flutter project is a beginner calculator app to explore basic button functionalities and implement arithmetic operations.
 
 ## Getting Started
 
